@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Survey</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/app.css">
+</head>
+<body>
+    <section class="main"  align="center">
+            <div class="progress">
+                <div id="progress" class="progress-bar progress-bar-info progress-bar-striped" role="progressbar"
+                aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+                </div>
+            </div>
+                  
+        <form id="survey-form" class="container">
+            <!-- name and image -->
+            <section id="user-info" class="step" data-stepcount="1">
+                <div class="form-group">
+                    <label for="user-name">your name</label>
+                    <input type="text" name="name" class="form-control question" id="user-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="user-image">upload image</label>
+                    <input type="file" name="image" class="form-control question" id="user-image" required>
+                </div>
+                <button class="step-btn btn btn-primary disabled step1" data-step="1" disabled>Next</button>
+            </section>
+
+            <!-- question 1 -->
+            <section  class="step hide" data-stepcount="2">
+                <h3>Question 1</h3>
+                <div class="form-group">
+                    <select class="select question" required name="userScores" data-index="0">
+                        <option >Choose...</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+
+                <button class="step-btn btn btn-primary" data-step="2">Back</button>  
+                <button class="step-btn btn btn-primary disabled step2" disabled data-step="2">Next</button>
+            </section>
+
+            <!-- question 2 -->
+            <section  class="step hide" data-stepcount="3">
+                <h3>Question 2</h3>
+                <div class="form-group">
+                    <select class="select question" required name="userScores" data-index="1">
+                        <option >Choose...</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+
+                <button class="step-btn btn btn-primary" data-step="3">Back</button>  
+                <button class="step-btn btn btn-primary disabled step3" disabled data-step="3">Next</button>
+            </section>
+
+            <!-- question 3 -->
+            <section  class="step hide" data-stepcount="4">
+                <h3>Question 3</h3>
+                <div class="form-group">
+                    <select class="select question" required name="userScores" data-index="2">
+                        <option >Choose...</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+
+                <button class="step-btn btn btn-primary" data-step="4">Back</button>  
+                <button class="step-btn btn btn-primary disabled step4" disabled data-step="4">Next</button>
+            </section>
+
+            <!-- question 4 -->
+            <section  class="step hide" data-stepcount="5">
+                    <h3>Question 4</h3>
+                    <div class="form-group">
+                        <select class="select question" required name="userScores" data-index="3">
+                            <option >Choose...</option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                    </div>
+    
+                    <button class="step-btn btn btn-primary" data-step="5">Back</button>  
+                    <button class="step-btn btn btn-primary disabled step5" disabled data-step="5">Next</button>
+            </section>
+
+            <!-- question 5 -->
+            <section  class="step hide" data-stepcount="6">
+                    <h3>Question 5</h3>
+                    <div class="form-group">
+                        <select class="select question" required name="userScores" data-index="4">
+                            <option >Choose...</option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                    </div>
+    
+                    <button class="step-btn btn btn-primary" data-step="6">Back</button>  
+                    <button class="step-btn btn btn-primary disabled step6" disabled data-step="6">Next</button>
+            </section>
+
+            <!-- question 6 -->
+            <section  class="step hide" data-stepcount="7">
+                <h3>Question 6</h3>
+                <div class="form-group">
+                    <select class="select question" required name="userScores" data-index="5">
+                        <option >Choose...</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+
+                <button class="step-btn btn btn-primary" data-step="7">Back</button>  
+                <button class="step-btn btn btn-primary disabled step7" disabled data-step="7">Next</button>
+            </section>
+
+            <!-- question 7 -->
+            <section  class="step hide" data-stepcount="8">
+                <h3>Question 7</h3>
+                <div class="form-group">
+                    <select class="select question" required name="userScores" data-index="6">
+                        <option >Choose...</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+
+                <button class="step-btn btn btn-primary" data-step="8">Back</button>  
+                <button class="step-btn btn btn-primary disabled step8" disabled data-step="8">Next</button>
+            </section>
+
+            <!-- question 8 -->
+            <section  class="step hide" data-stepcount="9">
+                <h3>Question 8</h3>
+                <div class="form-group">
+                    <select class="select question" required name="userScores" data-index="7">
+                        <option >Choose...</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+
+                <button class="step-btn btn btn-primary" data-step="9">Back</button>  
+                <button class="step-btn btn btn-primary disabled step9" disabled data-step="9">Next</button>
+            </section>
+
+            <!-- question 9 -->
+            <section  class="step hide" data-stepcount="10">
+                <h3>Question 9</h3>
+                <div class="form-group">
+                    <select class="select question" required name="userScores" data-index="8">
+                        <option >Choose...</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+
+                <button class="step-btn btn btn-primary" data-step="10">Back</button>  
+                <button class="step-btn btn btn-primary disabled step10" disabled data-step="10">Next</button>
+            </section>
+
+            <!-- question 10 -->
+            <section  class="step hide" data-stepcount="11">
+                    <h3>Question 10</h3>
+                    <div class="form-group">
+                        <select class="select question" required name="userScores" data-index="9">
+                            <option >Choose...</option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                    </div>
+    
+                    <button class="step-btn btn btn-primary" data-step="11">Back</button>  
+                    <button id="submit" class="step-btn btn btn-primary disabled step11" disabled data-step="11">submit</button>
+            </section>
+
+        </form>
+       
+    </section>
+
+    <footer  align="center">
+        <div class="container">
+            <nav>
+                <a href="/api/friends">friends</a>
+                <a href="github.com">github</a>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+        
+            <!-- Modal content-->
+            <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+               
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+            </div>
+        
+        </div>
+    </div>
+
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="./assets/js/app.js"></script>
+</body>
+</html>
