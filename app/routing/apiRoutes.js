@@ -50,9 +50,11 @@ module.exports = (app) => {
 }
 
 uploadImage = (req, image) => {
+    // from form data
     let imageFile = req.files.file;
+    // create path to the file
     let filePath = `${__dirname}/../public/assets/img/uploads/${image}.jpg`
-    
+    // moving to the path
     imageFile.mv(filePath, (err) => {
         if (err) console.log(err);
     });

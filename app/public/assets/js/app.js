@@ -83,7 +83,7 @@ $(".step-btn").click((e) => {
     let step = parseInt(elm.getAttribute("data-step"))
 
     switch(btn){
-        case "next" || "submit":
+        case "next":
             handleNext(step, elm);
         break;
         case "back":
@@ -112,10 +112,16 @@ $("#submit").click((e) => {
 
     let isValid = $("#survey-form")[0].checkValidity();
 
-    if(isValid) {
-        progress = progress + 10;
-        $("#progress").css("width", `$100%`);
-       
+    if(isValid) { 
+        stepCount ++
+        progress = progress + 9.09;
+        $("#progress").css("width", `${progress}%`);
+        let $currentStepElm = $(`[data-stepcount='${stepCount-1}']`);
+        $currentStepElm.addClass("hide");
+
+        let $nextStepElm = $(`[data-stepcount='${stepCount}']`);
+        $nextStepElm.removeClass("hide");
+
         let image = $('#user-image').prop('files')[0];
         let name = $("#user-name").val().trim();
         let userScores = []
@@ -139,6 +145,7 @@ $("#submit").click((e) => {
         getMatch(userData)
           
     } else {
+        alert("eerrrrr")
         reset();
         $(".modal-body").empty()
         $(".modal-body").text("Uht Oh! please check your survey and try again");
@@ -163,9 +170,9 @@ getMatch = (userData) => {
                 $(".modal-body").empty()
                 $(".modal-body").text("sorry no match was found :(")
                 $("#myModal").modal("show")
+                reset()
             } else {
                 // show in model
-
                 $(".modal-body").empty()
                 let imageSrc = data.image;
                 let image = $("<img>").attr("src", `assets/img/uploads/${imageSrc}.jpg`).attr("alt", "match")
@@ -173,6 +180,7 @@ getMatch = (userData) => {
                 let name = $("<h2>").text(data.name)
                 $(".modal-body").append(image, name)
                 $("#myModal").modal("show")
+                reset()
 
             }
         },
@@ -181,6 +189,7 @@ getMatch = (userData) => {
             $(".modal-body").empty()
             $(".modal-body").text("OOPS!! something went wrong. please try again")
             $("#myModal").modal("show")
+            reset()
         },
     });
 }
